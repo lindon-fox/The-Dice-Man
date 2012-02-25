@@ -280,7 +280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CWBuildNumber\" ${PROJECT_DIR}/TheDiceMan-Info.plist)\nbuildNumber=$(($buildNumber + 0.1))\n/usr/libexec/PlistBuddy -c \"Set :CWBuildNumber $buildNumber\" ${PROJECT_DIR}/TheDiceMan-Info .plist";
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CWBuildNumber\" ${PROJECT_DIR}/TheDiceMan/TheDiceMan-Info.plist)\nbuildNumber=$(($buildNumber + 0.1))\n/usr/libexec/PlistBuddy -c \"Set :CWBuildNumber $buildNumber\" ${PROJECT_DIR}/TheDiceMan/TheDiceMan-Info .plist";
 		};
 /* End PBXShellScriptBuildPhase section */
 
