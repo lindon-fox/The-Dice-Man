@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45A01C9C14F920EC008978DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A01C9B14F920EC008978DB /* UIKit.framework */; };
+		45A01C9E14F920EC008978DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A01C9D14F920EC008978DB /* Foundation.framework */; };
+		45A01CA014F920EC008978DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A01C9F14F920EC008978DB /* CoreGraphics.framework */; };
+		45A01CA614F920EC008978DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CA414F920EC008978DB /* InfoPlist.strings */; };
+		45A01CA814F920EC008978DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CA714F920EC008978DB /* main.m */; };
+		45A01CAC14F920EC008978DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CAB14F920EC008978DB /* AppDelegate.m */; };
+		45A01CAF14F920EC008978DB /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CAE14F920EC008978DB /* MasterViewController.m */; };
+		45A01CB214F920EC008978DB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CB114F920EC008978DB /* DetailViewController.m */; };
+		45A01CB514F920EC008978DB /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CB314F920EC008978DB /* MasterViewController.xib */; };
+		45A01CB814F920EC008978DB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CB614F920EC008978DB /* DetailViewController.xib */; };
+		45A01CC014F920EC008978DB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A01CBF14F920EC008978DB /* SenTestingKit.framework */; };
+		45A01CC114F920EC008978DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A01C9B14F920EC008978DB /* UIKit.framework */; };
+		45A01CC214F920EC008978DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A01C9D14F920EC008978DB /* Foundation.framework */; };
+		45A01CCA14F920EC008978DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CC814F920EC008978DB /* InfoPlist.strings */; };
+		45A01CCD14F920EC008978DB /* TheDiceManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CCC14F920EC008978DB /* TheDiceManTests.m */; };
+		45A01CD914F92B3F008978DB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CD714F92B3F008978DB /* icon.png */; };
+		45A01CDA14F92B3F008978DB /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CD814F92B3F008978DB /* icon@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45A01CC314F920EC008978DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45A01C8E14F920EB008978DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45A01C9614F920EC008978DB;
+			remoteInfo = TheDiceMan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		45A01C9714F920EC008978DB /* TheDiceMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheDiceMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A01C9B14F920EC008978DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		45A01C9D14F920EC008978DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		45A01C9F14F920EC008978DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		45A01CA314F920EC008978DB /* TheDiceMan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheDiceMan-Info.plist"; sourceTree = "<group>"; };
+		45A01CA514F920EC008978DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45A01CA714F920EC008978DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45A01CA914F920EC008978DB /* TheDiceMan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheDiceMan-Prefix.pch"; sourceTree = "<group>"; };
+		45A01CAA14F920EC008978DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		45A01CAB14F920EC008978DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		45A01CAD14F920EC008978DB /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		45A01CAE14F920EC008978DB /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		45A01CB014F920EC008978DB /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		45A01CB114F920EC008978DB /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		45A01CB414F920EC008978DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		45A01CB714F920EC008978DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		45A01CBE14F920EC008978DB /* TheDiceManTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheDiceManTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A01CBF14F920EC008978DB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		45A01CC714F920EC008978DB /* TheDiceManTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheDiceManTests-Info.plist"; sourceTree = "<group>"; };
+		45A01CC914F920EC008978DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45A01CCB14F920EC008978DB /* TheDiceManTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheDiceManTests.h; sourceTree = "<group>"; };
+		45A01CCC14F920EC008978DB /* TheDiceManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheDiceManTests.m; sourceTree = "<group>"; };
+		45A01CD714F92B3F008978DB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		45A01CD814F92B3F008978DB /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45A01C9414F920EC008978DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A01C9C14F920EC008978DB /* UIKit.framework in Frameworks */,
+				45A01C9E14F920EC008978DB /* Foundation.framework in Frameworks */,
+				45A01CA014F920EC008978DB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A01CBA14F920EC008978DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A01CC014F920EC008978DB /* SenTestingKit.framework in Frameworks */,
+				45A01CC114F920EC008978DB /* UIKit.framework in Frameworks */,
+				45A01CC214F920EC008978DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45A01C8C14F920EB008978DB = {
+			isa = PBXGroup;
+			children = (
+				45A01CA114F920EC008978DB /* TheDiceMan */,
+				45A01CC514F920EC008978DB /* TheDiceManTests */,
+				45A01C9A14F920EC008978DB /* Frameworks */,
+				45A01C9814F920EC008978DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45A01C9814F920EC008978DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45A01C9714F920EC008978DB /* TheDiceMan.app */,
+				45A01CBE14F920EC008978DB /* TheDiceManTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45A01C9A14F920EC008978DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45A01C9B14F920EC008978DB /* UIKit.framework */,
+				45A01C9D14F920EC008978DB /* Foundation.framework */,
+				45A01C9F14F920EC008978DB /* CoreGraphics.framework */,
+				45A01CBF14F920EC008978DB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45A01CA114F920EC008978DB /* TheDiceMan */ = {
+			isa = PBXGroup;
+			children = (
+				45A01CD714F92B3F008978DB /* icon.png */,
+				45A01CD814F92B3F008978DB /* icon@2x.png */,
+				45A01CAA14F920EC008978DB /* AppDelegate.h */,
+				45A01CAB14F920EC008978DB /* AppDelegate.m */,
+				45A01CAD14F920EC008978DB /* MasterViewController.h */,
+				45A01CAE14F920EC008978DB /* MasterViewController.m */,
+				45A01CB014F920EC008978DB /* DetailViewController.h */,
+				45A01CB114F920EC008978DB /* DetailViewController.m */,
+				45A01CB314F920EC008978DB /* MasterViewController.xib */,
+				45A01CB614F920EC008978DB /* DetailViewController.xib */,
+				45A01CA214F920EC008978DB /* Supporting Files */,
+			);
+			path = TheDiceMan;
+			sourceTree = "<group>";
+		};
+		45A01CA214F920EC008978DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45A01CA314F920EC008978DB /* TheDiceMan-Info.plist */,
+				45A01CA414F920EC008978DB /* InfoPlist.strings */,
+				45A01CA714F920EC008978DB /* main.m */,
+				45A01CA914F920EC008978DB /* TheDiceMan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45A01CC514F920EC008978DB /* TheDiceManTests */ = {
+			isa = PBXGroup;
+			children = (
+				45A01CCB14F920EC008978DB /* TheDiceManTests.h */,
+				45A01CCC14F920EC008978DB /* TheDiceManTests.m */,
+				45A01CC614F920EC008978DB /* Supporting Files */,
+			);
+			path = TheDiceManTests;
+			sourceTree = "<group>";
+		};
+		45A01CC614F920EC008978DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45A01CC714F920EC008978DB /* TheDiceManTests-Info.plist */,
+				45A01CC814F920EC008978DB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45A01C9614F920EC008978DB /* TheDiceMan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45A01CD014F920EC008978DB /* Build configuration list for PBXNativeTarget "TheDiceMan" */;
+			buildPhases = (
+				45A01C9314F920EC008978DB /* Sources */,
+				45A01C9414F920EC008978DB /* Frameworks */,
+				45A01C9514F920EC008978DB /* Resources */,
+				45A01CD614F920F6008978DB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheDiceMan;
+			productName = TheDiceMan;
+			productReference = 45A01C9714F920EC008978DB /* TheDiceMan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45A01CBD14F920EC008978DB /* TheDiceManTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45A01CD314F920EC008978DB /* Build configuration list for PBXNativeTarget "TheDiceManTests" */;
+			buildPhases = (
+				45A01CB914F920EC008978DB /* Sources */,
+				45A01CBA14F920EC008978DB /* Frameworks */,
+				45A01CBB14F920EC008978DB /* Resources */,
+				45A01CBC14F920EC008978DB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45A01CC414F920EC008978DB /* PBXTargetDependency */,
+			);
+			name = TheDiceManTests;
+			productName = TheDiceManTests;
+			productReference = 45A01CBE14F920EC008978DB /* TheDiceManTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45A01C8E14F920EB008978DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = ABS;
+			};
+			buildConfigurationList = 45A01C9114F920EB008978DB /* Build configuration list for PBXProject "TheDiceMan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 45A01C8C14F920EB008978DB;
+			productRefGroup = 45A01C9814F920EC008978DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45A01C9614F920EC008978DB /* TheDiceMan */,
+				45A01CBD14F920EC008978DB /* TheDiceManTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45A01C9514F920EC008978DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A01CA614F920EC008978DB /* InfoPlist.strings in Resources */,
+				45A01CB514F920EC008978DB /* MasterViewController.xib in Resources */,
+				45A01CB814F920EC008978DB /* DetailViewController.xib in Resources */,
+				45A01CD914F92B3F008978DB /* icon.png in Resources */,
+				45A01CDA14F92B3F008978DB /* icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A01CBB14F920EC008978DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A01CCA14F920EC008978DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45A01CBC14F920EC008978DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		45A01CD614F920F6008978DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CWBuildNumber\" ${PROJECT_DIR}/MyApp-Info.plist)\nbuildNumber=$(($buildNumber + 0.1))\n/usr/libexec/PlistBuddy -c \"Set :CWBuildNumber $buildNumber\" ${PROJECT_DIR}/MyApp-Info.plist";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45A01C9314F920EC008978DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A01CA814F920EC008978DB /* main.m in Sources */,
+				45A01CAC14F920EC008978DB /* AppDelegate.m in Sources */,
+				45A01CAF14F920EC008978DB /* MasterViewController.m in Sources */,
+				45A01CB214F920EC008978DB /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A01CB914F920EC008978DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A01CCD14F920EC008978DB /* TheDiceManTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45A01CC414F920EC008978DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45A01C9614F920EC008978DB /* TheDiceMan */;
+			targetProxy = 45A01CC314F920EC008978DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45A01CA414F920EC008978DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A01CA514F920EC008978DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		45A01CB314F920EC008978DB /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A01CB414F920EC008978DB /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		45A01CB614F920EC008978DB /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A01CB714F920EC008978DB /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		45A01CC814F920EC008978DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A01CC914F920EC008978DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45A01CCE14F920EC008978DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		45A01CCF14F920EC008978DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45A01CD114F920EC008978DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheDiceMan/TheDiceMan-Prefix.pch";
+				INFOPLIST_FILE = "TheDiceMan/TheDiceMan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		45A01CD214F920EC008978DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheDiceMan/TheDiceMan-Prefix.pch";
+				INFOPLIST_FILE = "TheDiceMan/TheDiceMan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		45A01CD414F920EC008978DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TheDiceMan.app/TheDiceMan";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheDiceMan/TheDiceMan-Prefix.pch";
+				INFOPLIST_FILE = "TheDiceManTests/TheDiceManTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		45A01CD514F920EC008978DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TheDiceMan.app/TheDiceMan";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TheDiceMan/TheDiceMan-Prefix.pch";
+				INFOPLIST_FILE = "TheDiceManTests/TheDiceManTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45A01C9114F920EB008978DB /* Build configuration list for PBXProject "TheDiceMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A01CCE14F920EC008978DB /* Debug */,
+				45A01CCF14F920EC008978DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45A01CD014F920EC008978DB /* Build configuration list for PBXNativeTarget "TheDiceMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A01CD114F920EC008978DB /* Debug */,
+				45A01CD214F920EC008978DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45A01CD314F920EC008978DB /* Build configuration list for PBXNativeTarget "TheDiceManTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A01CD414F920EC008978DB /* Debug */,
+				45A01CD514F920EC008978DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45A01C8E14F920EB008978DB /* Project object */;
+}
