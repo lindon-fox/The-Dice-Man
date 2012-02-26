@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RollDefinition.h"
 
-@class DetailViewController;
+@class ConfirmRollViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController{
+    NSMutableArray *rollDefinitions;
+}
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) ConfirmRollViewController *confirmRollViewController;
 
 @end

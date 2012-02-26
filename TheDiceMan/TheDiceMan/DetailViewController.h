@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@class RollDefinition;
 
-@property (strong, nonatomic) id detailItem;
+@interface DetailViewController : UIViewController{
+    
+}
+
+@property (strong, nonatomic) RollDefinition *rollDefinition;
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+
 
 @end

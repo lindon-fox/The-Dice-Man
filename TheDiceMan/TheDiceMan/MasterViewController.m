@@ -7,25 +7,27 @@
 //
 
 #import "MasterViewController.h"
-
-#import "DetailViewController.h"
+#import "ConfirmRollViewController.h"
 
 @implementation MasterViewController
 
-@synthesize detailViewController = _detailViewController;
+@synthesize confirmRollViewController = _confirmRollViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Master", @"Master");
+        rollDefinitions = [[NSMutableArray alloc] init];
+        [rollDefinitions addObject:[RollDefinition rollDefinitionWithNumberOfPossibilities:2]];
+        [rollDefinitions addObject:[RollDefinition rollDefinitionWithNumberOfPossibilities:3]];
     }
     return self;
 }
 							
 - (void)dealloc
 {
-    [_detailViewController release];
+    [rollDefinitions release];
+    [_confirmRollViewController release];
     [super dealloc];
 }
 
@@ -84,7 +86,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section == 0) {
+        return [rollDefinitions count];
+    }
+    return 0;
 }
 
 // Customize the appearance of table view cells.
@@ -99,7 +104,8 @@
     }
 
     // Configure the cell.
-    cell.textLabel.text = NSLocalizedString(@"Detail", @"Detail");
+    RollDefinition *rollDefinition = (RollDefinition *)[rollDefinitions objectAtIndex:indexPath.row];
+    cell.textLabel.text = [rollDefinition getDisplayName];
     return cell;
 }
 
@@ -143,10 +149,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.detailViewController) {
-        self.detailViewController = [[[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil] autorelease];
+    if (!self.confirmRollViewController) {
+        self.confirmRollViewController = [[[ConfirmRollViewController alloc] initWithNibName:@"ConfirmRollViewController" bundle:nil] autorelease];
     }
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
+    RollDefinition *rollDefinition = [rollDefinitions objectAtIndex:indexPath.row];
+    [self.confirmRollViewController setRollDefinition:rollDefinition];
+    [self.navigationController pushViewController:self.confirmRollViewController animated:YES];
 }
 
 @end

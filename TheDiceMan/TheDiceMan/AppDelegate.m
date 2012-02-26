@@ -31,6 +31,8 @@
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    NSLog(@"This should be printed all the time.");
+    DBLog(@"This should onlhy print during debug mode");
     return YES;
 }
 

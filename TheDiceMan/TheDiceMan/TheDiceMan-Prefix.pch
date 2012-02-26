@@ -14,7 +14,7 @@
 #endif
 
 
-#ifdef DEBUGGING
+#ifdef DEBUG
 # define DBLog(fmt,...) NSLog(@"%@",[NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
 #else
 # define DBLog(...)

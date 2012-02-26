@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "RollDefinition.h"
+#import "RandomEngine.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -14,35 +16,35 @@
 
 @implementation DetailViewController
 
-@synthesize detailItem = _detailItem;
+@synthesize rollDefinition = _rollDefinition;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 
 - (void)dealloc
 {
-    [_detailItem release];
+    [_rollDefinition release];
     [_detailDescriptionLabel release];
     [super dealloc];
 }
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setRollDefinition:(RollDefinition *)newRollDefinition
 {
-    if (_detailItem != newDetailItem) {
-        [_detailItem release]; 
-        _detailItem = [newDetailItem retain]; 
+    if (_rollDefinition != newRollDefinition) {
+        [_rollDefinition release]; 
+        _rollDefinition = [newRollDefinition retain]; 
 
-        // Update the view.
-        [self configureView];
     }
+    // Update the view.
+    [self configureView];
 }
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (self.rollDefinition) {
+        self.detailDescriptionLabel.text = [NSString stringWithFormat:@"Result: %d", [RandomEngine rollWithRollDefinition:self.rollDefinition]];
     }
 }
 

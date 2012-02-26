@@ -22,8 +22,12 @@
 		45A01CC214F920EC008978DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A01C9D14F920EC008978DB /* Foundation.framework */; };
 		45A01CCA14F920EC008978DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CC814F920EC008978DB /* InfoPlist.strings */; };
 		45A01CCD14F920EC008978DB /* TheDiceManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CCC14F920EC008978DB /* TheDiceManTests.m */; };
-		45A01CD914F92B3F008978DB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CD714F92B3F008978DB /* icon.png */; };
-		45A01CDA14F92B3F008978DB /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CD814F92B3F008978DB /* icon@2x.png */; };
+		45A01CDE14F939C6008978DB /* RollDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CDD14F939C6008978DB /* RollDefinition.m */; };
+		45A01CE214F944A3008978DB /* ConfirmRollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CE014F944A3008978DB /* ConfirmRollViewController.m */; };
+		45A01CE314F944A4008978DB /* ConfirmRollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CE114F944A3008978DB /* ConfirmRollViewController.xib */; };
+		45A01CE514F94562008978DB /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CE414F94562008978DB /* icon@2x.png */; };
+		45A01CE714F94567008978DB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A01CE614F94567008978DB /* icon.png */; };
+		45A01CEB14F94DC6008978DB /* RandomEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A01CEA14F94DC6008978DB /* RandomEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +63,15 @@
 		45A01CC914F920EC008978DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		45A01CCB14F920EC008978DB /* TheDiceManTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheDiceManTests.h; sourceTree = "<group>"; };
 		45A01CCC14F920EC008978DB /* TheDiceManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheDiceManTests.m; sourceTree = "<group>"; };
-		45A01CD714F92B3F008978DB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		45A01CD814F92B3F008978DB /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		45A01CDC14F939C6008978DB /* RollDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RollDefinition.h; path = Model/RollDefinition.h; sourceTree = "<group>"; };
+		45A01CDD14F939C6008978DB /* RollDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RollDefinition.m; path = Model/RollDefinition.m; sourceTree = "<group>"; };
+		45A01CDF14F944A3008978DB /* ConfirmRollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmRollViewController.h; sourceTree = "<group>"; };
+		45A01CE014F944A3008978DB /* ConfirmRollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmRollViewController.m; sourceTree = "<group>"; };
+		45A01CE114F944A3008978DB /* ConfirmRollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmRollViewController.xib; sourceTree = "<group>"; };
+		45A01CE414F94562008978DB /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		45A01CE614F94567008978DB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		45A01CE914F94DC6008978DB /* RandomEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomEngine.h; path = Logic/RandomEngine.h; sourceTree = "<group>"; };
+		45A01CEA14F94DC6008978DB /* RandomEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomEngine.m; path = Logic/RandomEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +101,8 @@
 		45A01C8C14F920EB008978DB = {
 			isa = PBXGroup;
 			children = (
+				45A01CE614F94567008978DB /* icon.png */,
+				45A01CE414F94562008978DB /* icon@2x.png */,
 				45A01CA114F920EC008978DB /* TheDiceMan */,
 				45A01CC514F920EC008978DB /* TheDiceManTests */,
 				45A01C9A14F920EC008978DB /* Frameworks */,
@@ -120,15 +133,18 @@
 		45A01CA114F920EC008978DB /* TheDiceMan */ = {
 			isa = PBXGroup;
 			children = (
-				45A01CD714F92B3F008978DB /* icon.png */,
-				45A01CD814F92B3F008978DB /* icon@2x.png */,
+				45A01CE814F94DA6008978DB /* Logic */,
+				45A01CDB14F93979008978DB /* Model */,
 				45A01CAA14F920EC008978DB /* AppDelegate.h */,
 				45A01CAB14F920EC008978DB /* AppDelegate.m */,
 				45A01CAD14F920EC008978DB /* MasterViewController.h */,
 				45A01CAE14F920EC008978DB /* MasterViewController.m */,
+				45A01CB314F920EC008978DB /* MasterViewController.xib */,
+				45A01CDF14F944A3008978DB /* ConfirmRollViewController.h */,
+				45A01CE014F944A3008978DB /* ConfirmRollViewController.m */,
+				45A01CE114F944A3008978DB /* ConfirmRollViewController.xib */,
 				45A01CB014F920EC008978DB /* DetailViewController.h */,
 				45A01CB114F920EC008978DB /* DetailViewController.m */,
-				45A01CB314F920EC008978DB /* MasterViewController.xib */,
 				45A01CB614F920EC008978DB /* DetailViewController.xib */,
 				45A01CA214F920EC008978DB /* Supporting Files */,
 			);
@@ -163,6 +179,24 @@
 				45A01CC814F920EC008978DB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45A01CDB14F93979008978DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45A01CDC14F939C6008978DB /* RollDefinition.h */,
+				45A01CDD14F939C6008978DB /* RollDefinition.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		45A01CE814F94DA6008978DB /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				45A01CE914F94DC6008978DB /* RandomEngine.h */,
+				45A01CEA14F94DC6008978DB /* RandomEngine.m */,
+			);
+			name = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +274,9 @@
 				45A01CA614F920EC008978DB /* InfoPlist.strings in Resources */,
 				45A01CB514F920EC008978DB /* MasterViewController.xib in Resources */,
 				45A01CB814F920EC008978DB /* DetailViewController.xib in Resources */,
-				45A01CD914F92B3F008978DB /* icon.png in Resources */,
-				45A01CDA14F92B3F008978DB /* icon@2x.png in Resources */,
+				45A01CE314F944A4008978DB /* ConfirmRollViewController.xib in Resources */,
+				45A01CE514F94562008978DB /* icon@2x.png in Resources */,
+				45A01CE714F94567008978DB /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +328,9 @@
 				45A01CAC14F920EC008978DB /* AppDelegate.m in Sources */,
 				45A01CAF14F920EC008978DB /* MasterViewController.m in Sources */,
 				45A01CB214F920EC008978DB /* DetailViewController.m in Sources */,
+				45A01CDE14F939C6008978DB /* RollDefinition.m in Sources */,
+				45A01CE214F944A3008978DB /* ConfirmRollViewController.m in Sources */,
+				45A01CEB14F94DC6008978DB /* RandomEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +437,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheDiceMan/TheDiceMan-Prefix.pch";
 				INFOPLIST_FILE = "TheDiceMan/TheDiceMan-Info.plist";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
