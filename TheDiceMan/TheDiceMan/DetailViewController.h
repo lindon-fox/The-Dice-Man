@@ -11,10 +11,12 @@
 @class RollDefinition;
 
 @interface DetailViewController : UIViewController{
-    
+    BOOL requiresConfiguration;
 }
 
 @property (strong, nonatomic) RollDefinition *rollDefinition;
+
+@property (nonatomic) int rollResult;
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 

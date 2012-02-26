@@ -17,6 +17,7 @@
 @implementation DetailViewController
 
 @synthesize rollDefinition = _rollDefinition;
+@synthesize rollResult = _rollResult;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 
 - (void)dealloc
@@ -33,10 +34,17 @@
     if (_rollDefinition != newRollDefinition) {
         [_rollDefinition release]; 
         _rollDefinition = [newRollDefinition retain]; 
-
+        // Update the view.
+        requiresConfiguration = YES;
     }
-    // Update the view.
-    [self configureView];
+}
+
+-(void) setRollResult:(int)newRollResult
+{
+    if (_rollResult != newRollResult) {
+        _rollResult = newRollResult;
+        requiresConfiguration = YES;
+    }
 }
 
 - (void)configureView
@@ -44,7 +52,7 @@
     // Update the user interface for the detail item.
 
     if (self.rollDefinition) {
-        self.detailDescriptionLabel.text = [NSString stringWithFormat:@"Result: %d", [RandomEngine rollWithRollDefinition:self.rollDefinition]];
+        self.detailDescriptionLabel.text = [self.rollDefinition getDisplayNameForOption:self.rollResult];
     }
 }
 
@@ -73,6 +81,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    if (requiresConfiguration) {
+        [self configureView];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -101,6 +112,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Detail", @"Detail");
+        requiresConfiguration = YES;
     }
     return self;
 }

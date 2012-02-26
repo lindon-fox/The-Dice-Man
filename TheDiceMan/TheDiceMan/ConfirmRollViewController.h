@@ -11,8 +11,8 @@
 
 @class DetailViewController;
 
-@interface ConfirmRollViewController : UIViewController{
-    RollDefinition *rollDefinition;
+@interface ConfirmRollViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+    IBOutlet UITableView *tableView;
 }
 
 @property (nonatomic, retain) RollDefinition *rollDefinition;

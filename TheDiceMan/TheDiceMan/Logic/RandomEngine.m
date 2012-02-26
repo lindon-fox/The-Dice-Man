@@ -13,7 +13,7 @@
 
 +(int)rollWithRollDefinition:(RollDefinition *)rollDefinition{
     int answer = arc4random() % rollDefinition.numberOfPossibilities;
-    DBLog(@"Roll: %d", answer);
+    DBLog(@"Roll: %d from number of possibilities: %d", answer, rollDefinition.numberOfPossibilities);
     return answer;
 }
 @end

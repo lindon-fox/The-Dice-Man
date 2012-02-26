@@ -8,10 +8,17 @@
 
 #import "MasterViewController.h"
 #import "ConfirmRollViewController.h"
+#import "NewRollDefinitionViewController.h"
+
+
+@interface MasterViewController(PrivateMethods)
+-(void)addButtonPressed:(id)sender;
+@end
 
 @implementation MasterViewController
 
 @synthesize confirmRollViewController = _confirmRollViewController;
+@synthesize newRollDefinitionViewController = _newRollDefinitionViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -20,6 +27,7 @@
         rollDefinitions = [[NSMutableArray alloc] init];
         [rollDefinitions addObject:[RollDefinition rollDefinitionWithNumberOfPossibilities:2]];
         [rollDefinitions addObject:[RollDefinition rollDefinitionWithNumberOfPossibilities:3]];
+        [rollDefinitions addObject:[RollDefinition rollDefinitionWithNumberOfPossibilities:9]];
     }
     return self;
 }
@@ -43,6 +51,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed:)];
+
+    self.navigationItem.rightBarButtonItem = addBarButtonItem;
+    [addBarButtonItem release];
 }
 
 - (void)viewDidUnload
@@ -155,6 +167,19 @@
     RollDefinition *rollDefinition = [rollDefinitions objectAtIndex:indexPath.row];
     [self.confirmRollViewController setRollDefinition:rollDefinition];
     [self.navigationController pushViewController:self.confirmRollViewController animated:YES];
+}
+
+- (void) addButtonPressed:(id)sender
+{
+    if (!self.newRollDefinitionViewController) {
+        self.newRollDefinitionViewController = [[[NewRollDefinitionViewController alloc] initWithNibName:@"NewRollDefinitionViewController" bundle:nil] autorelease];
+        self.newRollDefinitionViewController.delegate = self;
+    }
+    [self.navigationController presentModalViewController:self.newRollDefinitionViewController animated:YES];
+}
+
+- (void) cancelButtonPressedForViewController:(NewRollDefinitionViewController *)viewController{
+    [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
 @end

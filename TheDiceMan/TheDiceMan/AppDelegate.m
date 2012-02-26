@@ -30,6 +30,9 @@
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
     self.window.rootViewController = self.navigationController;
+    
+    [application setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+    
     [self.window makeKeyAndVisible];
     NSLog(@"This should be printed all the time.");
     DBLog(@"This should onlhy print during debug mode");

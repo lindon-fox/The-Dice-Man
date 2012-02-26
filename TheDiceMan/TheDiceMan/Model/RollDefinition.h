@@ -19,7 +19,7 @@
 
 
 - (NSString *) getDisplayName;
-
-
+- (NSString *) getDisplayNameForOption:(int)option;
++(NSString *) getDefaultNameForOption:(int)option;
 
 @end

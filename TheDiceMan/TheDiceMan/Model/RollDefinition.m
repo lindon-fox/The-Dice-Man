@@ -40,16 +40,30 @@
 
 -(void)setNumberOfPossibilities:(int)value
 {
-    NSAssert(value > 1, @"You need at least two possibilities@");
+    NSAssert(value > 1, @"You need at least two possibilities");
     numberOfPossibilities = value;
 }
 
--(NSString *) getDisplayName{
-
-    if (numberOfPossibilities == 2) {
-        return @"50-50";
++(NSString *) getDefaultNameForOption:(int)option{
+    NSString *optionName = nil;
+    if (option == 2) {
+        optionName = @"50-50";
     }
-    return [NSString stringWithFormat:@"one in %d", numberOfPossibilities];
+    optionName = [NSString stringWithFormat:@"one in %d", option];
+    
+    return optionName;
+}
+
+-(NSString *) getDisplayName{
+    return [RollDefinition getDefaultNameForOption:numberOfPossibilities];
+}
+
+- (NSString *) getDisplayNameForOption:(int)option
+{
+    DBLog(@"option %d from number of possibilities: %d", option, numberOfPossibilities);
+    NSAssert(option >= 0, @"Option should be greater than or equal to 0");
+    NSAssert(option < numberOfPossibilities, @"You should not be asking for an option greater than or equal to the number of possibilities");
+    return [NSString stringWithFormat:@"Option %d", option + 1];
 }
 
 @end
